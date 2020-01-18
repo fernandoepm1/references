@@ -18,7 +18,7 @@
         "name": "projects/your-agents-project-id/agent/sessions/88d13aa8-2999-4f71-b233-39cbf3a824a0/contexts/generic",
         "lifespanCount": 5,
         "parameters": {
-          "param": "param value",
+          "param": "param value"
         }
       }
     ],
@@ -36,7 +36,7 @@
       }
     ],
     "intentDetectionConfidence": 1,
-    "diagnosticInfo": {},
+    "diagnosticInfo": {}
   },
   "originalDetectIntentRequest": {
     "source": "google",
@@ -44,13 +44,13 @@
     "payload": {
       "isInSandbox": true,
       "surface": {
-        "capabilities": [...]
+        "capabilities": []
       },
-      "inputs": [...],
-      "user": {...},
-      "conversation": {...},
-      "availableSurfaces": [...]
+      "inputs": [],
+      "user": {},
+      "conversation": {},
+      "availableSurfaces": []
     }
-  },
+  }
 }
 ```
