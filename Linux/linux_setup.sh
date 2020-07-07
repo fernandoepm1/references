@@ -87,6 +87,7 @@ git config --list
 # TODO
 
 # install fonts
+sudo apt-get install fonts-powerline
 # install asdf, ruby, node
 # install chrome, spotify, zeal, vscode, insomnia
 
