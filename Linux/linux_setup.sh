@@ -84,6 +84,24 @@ echo
 
 git config --list
 
+echo ---------------
+echo Installing asdf
+echo ---------------
+echo
+
+# Docs https://asdf-vm.com/#/core-manage-asdf-vm
+# From https://github.com/asdf-vm/asdf
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.8
+
+# Adding to zsh/bash
+echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.zshrc
+echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.zshrc
+# echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+# echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
+
+# Updating changes
+source ~/.zshrc
+
 # TODO
 
 # install fonts
