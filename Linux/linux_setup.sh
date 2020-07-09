@@ -41,7 +41,9 @@ git clone https://github.com/bhilburn/powerlevel9k.git \
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \
   ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
-# ~/.p10k.zsh
+# Change settings
+# code ~/.p10k.zsh
+# p10k configure
 
 echo ----------------------------
 echo Installing oh-my-zsh plugins
@@ -56,12 +58,13 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
 git clone https://github.com/zsh-users/zsh-autosuggestions \
   ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-# In WSL is giving permission issues, so add this line before source ~/.oh-my-zsh.sh
+# In WSL is giving permission issues,
+# so add this line before source ~/.oh-my-zsh.sh
 # ZSH_DISABLE_COMPFIX=true
 
-echo -------------------------------
-echo Add oh-my-zsh plugins to .zshrc
-echo -------------------------------
+echo -------------------------------------
+echo Add oh-my-zsh plugins/theme to .zshrc
+echo -------------------------------------
 echo
 
 nano ~/.zshrc
@@ -136,10 +139,26 @@ bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-ke
 asdf install nodejs latest:12
 asdf global nodejs latest:12
 
+echo ---------------
+echo Installing yarn
+echo ---------------
+echo
+
+# From https://classic.yarnpkg.com/en/docs/install/#debian-stable
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+sudo apt update && sudo apt install yarn
+
+echo -------------------
+echo Installing zealdocs
+echo -------------------
+echo
+
+sudo apt-get install zeal
+
 # TODO
 
 # install fonts
 sudo apt-get install fonts-powerline
-# install asdf, ruby, node
-# install chrome, spotify, zeal, vscode, insomnia
-
+# install chrome, spotify, vscode, insomnia
