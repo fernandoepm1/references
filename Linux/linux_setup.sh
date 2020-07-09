@@ -102,6 +102,28 @@ echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.zshrc
 # Updating changes
 source ~/.zshrc
 
+echo ----------------------------
+echo Installing ruby dependencies
+echo ----------------------------
+echo
+
+# From https://github.com/rbenv/ruby-build/wiki#suggested-build-environment
+sudo apt-get install autoconf bison build-essential \
+  libssl-dev libyaml-dev libreadline6-dev zlib1g-dev \
+  libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev
+
+echo ---------------
+echo Installing ruby
+echo ---------------
+echo
+
+# From https://github.com/asdf-vm/asdf-ruby
+asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+
+asdf install ruby latest
+asdf global ruby latest
+gem install bundler
+
 # TODO
 
 # install fonts
