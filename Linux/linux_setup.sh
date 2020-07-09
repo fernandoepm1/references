@@ -124,6 +124,18 @@ asdf install ruby latest
 asdf global ruby latest
 gem install bundler
 
+echo ---------------
+echo Installing node
+echo ---------------
+echo
+
+# From https://github.com/asdf-vm/asdf-nodejs
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
+
+asdf install nodejs latest:12
+asdf global nodejs latest:12
+
 # TODO
 
 # install fonts
