@@ -166,8 +166,33 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo rm google-chrome-stable_current_amd64.deb
 
+echo -----------------
+echo Installing vscode
+echo -----------------
+echo
+
+# Dependencies
+sudo apt update
+sudo apt install software-properties-common apt-transport-https wget
+
+# Importing Microsoft GPG key
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+
+# Enable vscode repo
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+
+# Install vscode
+sudo apt update && sudo apt install code
+
+
+
+
+
+
+
+
 # TODO
 
 # install fonts
 sudo apt-get install fonts-powerline
-# install chrome, spotify, vscode, insomnia
+# install spotify, insomnia
