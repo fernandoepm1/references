@@ -184,8 +184,17 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 # Install vscode
 sudo apt update && sudo apt install code
 
+echo ------------------
+echo Installing spotify
+echo ------------------
+echo
 
+# Adding repo and key
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 4773BD5E130D1D45
+sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
 
+# Install spotify-client
+sudo apt update && sudo apt install spotify-client
 
 
 
