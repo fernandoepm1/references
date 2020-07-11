@@ -157,6 +157,15 @@ echo
 
 sudo apt-get install zeal
 
+echo -----------------
+echo Installing chrome
+echo -----------------
+echo
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo rm google-chrome-stable_current_amd64.deb
+
 # TODO
 
 # install fonts
