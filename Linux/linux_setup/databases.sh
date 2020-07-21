@@ -6,7 +6,7 @@ echo -------------------
 echo
 
 sudo apt update
-sudo apt install postgresql postgresql-contrib
+sudo apt install libpq-dev postgresql postgresql-contrib
 
 echo ----------------------
 echo Creating postgres role
