@@ -2,26 +2,28 @@
 
 # Essentials
 # git, curl and wget
-sh essentials.sh
+sh linux_setup/essentials.sh
 
 # Terminal Tweaks
 # zsh and oh-my-zsh
-sh terminal_tweaks.sh
+sh linux_setup/terminal_tweaks.sh
 
 # Databases
 # postgres, pgAdmin4 and redis
-sh databases.sh
+sh linux_setup/databases.sh
 
 # Dev Tools
 # asdf, ruby, nodejs and yarn
-sh dev_tools.sh
+sh linux_setup/dev_tools.sh
 
 # Software
 # chrome, vscode, spotify, zeal, insomnia 
-sh software.sh
+sh linux_setup/software.sh
 
 
 # TODO
+
+# sh linux_setup/fonts.sh
 
 # install fonts
 sudo apt-get install fonts-powerline
