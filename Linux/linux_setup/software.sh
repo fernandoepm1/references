@@ -42,6 +42,20 @@ sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
 sudo apt update
 sudo apt install spotify-client
 
+echo ----------------
+echo Installing slack
+echo ----------------
+echo
+
+# Download slack
+wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.0.2-amd64.deb
+
+# Install it
+sudo apt install ./slack-desktop-*.deb
+
+# Remove it
+sudo rm slack-desktop-*.deb
+
 echo -------------------
 echo Installing zealdocs
 echo -------------------
