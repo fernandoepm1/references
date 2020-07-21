@@ -15,6 +15,9 @@ echo
 
 sudo -u postgres createuser --interactive
 
+# Setting postgres password
+sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'postgres';"
+
 # Switching to postgres prompt
 # sudo -u postgres psql
 
