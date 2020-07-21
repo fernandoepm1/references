@@ -65,3 +65,51 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" \
 
 sudo apt update
 sudo apt install yarn
+
+echo ------------------------------
+echo Installing docker dependencies
+echo ------------------------------
+echo
+
+sudo apt install apt-transport-https ca-certificates \
+  curl software-properties-common
+
+echo -----------------
+echo Installing docker
+echo -----------------
+echo
+
+# Add GPG Key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
+  | sudo apt-key add -
+
+# Add docker repo
+sudo add-apt-repository \
+  "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+
+# Install docker
+sudo apt update
+sudo apt install docker-ce
+
+echo ----------------------
+echo Checking docker status
+echo ----------------------
+echo
+
+sudo systemctl status docker
+
+echo ---------------------------
+echo Adding user to docker group
+echo ---------------------------
+echo
+
+# To avoid typing sudo every docker cmd
+sudo usermod -aG docker ${USER}
+
+# Applying changes
+su - ${USER}
+
+# Confirming changes
+id -nG
+
+#=> USER sudo docker
