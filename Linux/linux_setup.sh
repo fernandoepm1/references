@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
-echo ---------------------
-echo Updating dependencies
-echo ---------------------
-echo
-
-sudo apt-get update && sudo apt upgrade
+# Essentials
+# git, curl, wget
+sh essentials.sh
 
 echo --------------
 echo Installing zsh
