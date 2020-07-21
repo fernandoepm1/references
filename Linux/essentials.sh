@@ -27,3 +27,10 @@ echo ---------------
 echo
 
 sudo apt install wget
+
+echo ---------------
+echo Installing nano
+echo ---------------
+echo
+
+sudo apt install nano
