@@ -27,10 +27,6 @@ echo Installing oh-my-zsh themes
 echo ---------------------------
 echo
 
-# Powerlevel9k
-git clone https://github.com/bhilburn/powerlevel9k.git \
-  ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel9k
-
 # Powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \
   ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -51,6 +47,10 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
 # zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions \
   ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# zsh-history-substring-search
+git clone https://github.com/zsh-users/zsh-history-substring-search \
+  ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 
 # In WSL is giving permission issues,
 # so add this line before source ~/.oh-my-zsh.sh
